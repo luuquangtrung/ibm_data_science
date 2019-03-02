@@ -6,6 +6,7 @@
 ## WEEK 1: Introduction to Databases and Basic SQL
 
 Summary:
+
 Statement | Category
 ----------|----------------------------------
 `CREATE`  | *DDL*
