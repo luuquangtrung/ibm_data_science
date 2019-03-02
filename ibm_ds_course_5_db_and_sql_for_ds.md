@@ -723,7 +723,6 @@ These objects represent a database cursor which is used to manage the content of
 * A database cursor is a control structure that enables traversal over the records in a database
 * It behaves like a file name or file handle in a programming language. 
 
-IMAGE
 ![c5_fig_cursor_interface_db](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_cursor_interface_db.png) 
 
 
@@ -950,7 +949,6 @@ plt.title('Sodium Content')
 plt.show()
 ```
 
-IMAGE
 ![c5_fig_seaborn_scatterplot](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_seaborn_scatterplot.png)
 
 
@@ -990,7 +988,6 @@ plot.show()
 
 ```
 
-IMAGE
 ![c5_fig_histogram_protein](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_histogram_protein.png)
 
 
@@ -1017,8 +1014,6 @@ plot.show()
 
 ```
 
-
-IMAGE
 ![c5_fig_boxplot](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_boxplot.png)
 
 
