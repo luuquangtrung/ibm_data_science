@@ -55,13 +55,13 @@ The Data Science Methodology aims to answer 10 following questions:
 Data Science Methodology Flowchart: 
 * The data science methodology discussed in this course has been outlined by John Rollins, a seasoned and senior data scientist currently practising at IBM
 
-		Business Understanding 	-> Analytic Approach -> Data Requirements
-			^													||
-		Feedback --------------------					Data Collection	<----
-			^						|							|| 			|
-		Deployment					|					Data Understanding 	|
-			^						v							v			|
-		Evaluation	<------------> Modeling <--------->	Data Preparation ----
+Business Understanding 	-> Analytic Approach -> Data Requirements
+	^													||
+Feedback --------------------					Data Collection	<----
+	^						|							|| 			|
+Deployment					|					Data Understanding 	|
+	^						v							v			|
+Evaluation	<------------> Modeling <--------->	Data Preparation ----
 
 * Properties:
 	1. The flowchart is highly iterative.
