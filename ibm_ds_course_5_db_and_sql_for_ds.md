@@ -113,7 +113,7 @@ Example of a Relational DB Table:
 Table `book_table`:
 ---------------------------------------------
 book_id	| title
----------------------------------------------
+--------|------------------------------------
 B1		| Getting started with DB2 Express-C
 B2		| Database fundamentals
 B3		| Harry Potter
@@ -179,13 +179,13 @@ Outline:
 	* `INSERT` is a *DML* query used to read and modify data
 
 Table `book_table`:
----------------------------------------------
+
 book_id	| title
----------------------------------------------
+--------|------------------------------------
 B1		| Getting started with DB2 Express-C
 B2		| Database fundamentals
 B3		| Harry Potter
----------------------------------------------
+
 
 ```sql 
 -- Syntax:
@@ -216,13 +216,13 @@ Principles:
 
 
 Table `book_table`:
----------------------------------------------
+
 book_id	| title 					| author			
----------------------------------------------
+--------|---------------------------|--------
 B1		| Getting started with DB 	| Peter
 B2		| Database fundamentals	    | Kane
 B3		| Harry Potter 				| Jane
----------------------------------------------
+
 
 ```sql 
 -- Syntax:
@@ -255,13 +255,13 @@ delete from book_table
 ### Video 1: Using String Patterns, Ranges
 
 Table `book_table`:
------------------------------------------------------
+
 book_id	| title 					| author | pages			
------------------------------------------------------
+--------|---------------------------|--------|-------
 B1		| Getting started with DB 	| Peter  | 200
 B2		| Database fundamentals	    | Kane   | 295
 B3		| Harry Potter 				| Jane   | 300
------------------------------------------------------
+
 
 * What if we can't remember the name of the author, just only the first name starts with "R"? In a relational DB, we can use string patterns to search data rows that match this condition
 
@@ -373,14 +373,14 @@ db2 => select country, count(country) as count from author
 * Using DB functions can significantly reduce the amount of data that needs to be retrieved from the database (reduces network traffic and use of bandwidth) and may also be faster. (It is also possible to create your own functions in the database but that is beyond the scope of this course).
 
 **Example**: Table `PET_SALE`:
------------------------------------------------------------------
+
 ID		| ANIMAL 		| QUANTITY	| SALEPRICE		| SALEDATE		
 integer	| varchar(20)	| integer	| decimal(6,2)	| date
------------------------------------------------------------------
+--------|---------------|-----------|---------------|------------
 1		| Cat  			| 9 		| 450.09		| 2018-05-29
 2		| Dog    		| 3   		| 666.66		| 2018-05-20
 3		| Parrot 		| 1   		| 300.00		| 2018-06-04
------------------------------------------------------------------
+
 
 #### Aggregate or Column Functions
 * An aggregate function takes a collection of like values (such as all of the values in a column) as input and returns a single value (or `NULL`)
@@ -488,13 +488,13 @@ select EMP_ID, F_NAME, L_NAME, SALARY from employees
 ```
 
 **Example**: Table `employees`:
-----------------------------------------------------
+
 EMP_ID		| F_NAME 		| L_NAME	| SALARY		
-----------------------------------------------------
+------------|---------------|-----------|-----------
 E1008		| Bharath  		| Gupta		| 65000.00		
 E1007		| Mary			| Thomas   	| 65000.00
 E1004		| Santosh 		| Kumar   	| 65000.00
-----------------------------------------------------
+
 
 The `IN` operator can also be used and there can be multiple leves of sub-queries, such as:
 
@@ -535,13 +535,13 @@ In this lesson we will examine the first two options. The third is covered in mo
 In a previous lesson we learned how to use sub-queries. Now let's use sub-queries to work with multiple tables. Lets consider the `EMPLOYEES` and department tables from the previous lesson.
 
 **Example**: Table `EMPLOYEES`:
----------------------------------------------------------------------------------------------------
+
 EMP_ID | F_NAME | L_NAME | SSN | B_DATE 	| SEX | ADDRESS | JOB_ID | SALARY | MANAGER_ID | DEP_ID		
----------------------------------------------------------------------------------------------------
+-------|--------|--------|-----|------------|-----|---------|--------|--------|------------|-------
 E1008  | Bhara  | Gupta  | 123 | 1972-07-31 | F   | 1 av... | 200    | 65000  | 30002	   | 5	
 E1007  | Mary 	| Thomas | 123 | 1972-07-31 | F   |	1 av... | 400    | 65000  | 30002      | 5
 E1004  | San  	| Kumar  | 123 | 1972-07-31 | M   | 1 av... | 500    | 65000  | 30002 	   | 7
----------------------------------------------------------------------------------------------------
+
 
 
 ```sql
@@ -551,12 +551,12 @@ SELECT F_NAME FROM EMPLOYEES
 
 
 **Example**: Table `DEPARTMENTS`:
----------------------------------------------
+
 DEPT_ID_DEP | DEP_NAME | MANAGER_ID | LOC_ID		
----------------------------------------------
+------------|----------|------------|--------
 5			| Software | 30002		| L0002
 7			| Design   | 30003		| L0003
----------------------------------------------
+
 
 
 ```sql
@@ -676,9 +676,9 @@ and explore that same data with pandas, scikit-learn, ggplot2, and TensorFlow
 
 **API's used by popular SQL-based DBMS systems**
 
------------------------------------------------------
+
 Application or DB 			| SQL API
------------------------------------------------------
+----------------------------|------------------------
 MySQL						| MySQL Connector/Python
 PostgreSQL					| psycopg2
 IBM DB2 					| ibm_db
@@ -687,7 +687,7 @@ DB access for MS Windows 	| ODBC
 Oracle 						| OCI
 Java 						| JDBC
 MongoDB						| PyMongo
------------------------------------------------------
+
 
 
 ### Video 2: Writing code using DB-API
@@ -723,14 +723,14 @@ These objects represent a database cursor which is used to manage the content of
 * A database cursor is a control structure that enables traversal over the records in a database
 * It behaves like a file name or file handle in a programming language. 
 
-------------------------------
-| Your 			-------------|  
-| Application 	| open()	 |---------- 		   ------------
-|				| execute()	 | cursor  | <-------> | Database |
-|				| fetchall() |----------		   ------------
-|				| close()	 |
-|				-------------|
------------------------------
+	------------------------------
+	| Your 			-------------|  
+	| Application 	| open()	 |---------- 		   ------------
+	|				| execute()	 | cursor  | <-------> | Database |
+	|				| fetchall() |----------		   ------------
+	|				| close()	 |
+	|				-------------|
+	-----------------------------
 
 * Just as a program opens a filed accesses files contents, it opens a cursor to gain access to the query results
 * Similarly, the program closes a file to end its access and closes a cursor to end access to the query results
@@ -867,13 +867,13 @@ stmt = ibm_db.exec_immediate(conn,
 ```
 
 Result: TABLE `Trucks`
----------------------------------------------------------------------------------------------------------
+
 Serial No 	| Model 		| Manufacturer 				| Engine Size 		| Class
----------------------------------------------------------------------------------------------------------
+------------|---------------|---------------------------|-------------------|----------------------------
 A1234 		| Lonestar		| International Trucks 		| Cummins ISX15 	| Class8
 B5432 		| Volvo VN 		| Volvo Trucks 				| Volvo D11 		| Heavy Duty Tractor Class 8
 C5674 		| Kenworth W900	| Kenworth Truck Company	| Caterpillar C9	| Class8
---------------------------------------------------------------------------------------------------------- 
+ 
 
 
 ```python
