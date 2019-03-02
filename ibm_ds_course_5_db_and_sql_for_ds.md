@@ -723,14 +723,9 @@ These objects represent a database cursor which is used to manage the content of
 * A database cursor is a control structure that enables traversal over the records in a database
 * It behaves like a file name or file handle in a programming language. 
 
-	------------------------------
-	| Your 			-------------|  
-	| Application 	| open()	 |---------- 		   ------------
-	|				| execute()	 | cursor  | <-------> | Database |
-	|				| fetchall() |----------		   ------------
-	|				| close()	 |
-	|				-------------|
-	-----------------------------
+IMAGE
+![c5_fig_cursor_interface_db](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_cursor_interface_db.png) 
+
 
 * Just as a program opens a filed accesses files contents, it opens a cursor to gain access to the query results
 * Similarly, the program closes a file to end its access and closes a cursor to end access to the query results
@@ -955,18 +950,8 @@ plt.title('Sodium Content')
 plt.show()
 ```
 
-
-				Sodium Content
-		^
-Sodium 	|				* <-- Highest sodium value
-		|	**
-		|	**			*	
-		|	***			***
-		|	**			*			**
-		|	*						*
-		----------------------------------->
-			Breakfast	Beef&Pork	Salads
-					Category
+IMAGE
+![c5_fig_seaborn_scatterplot](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_seaborn_scatterplot.png)
 
 
 Get the maximum sodium content
@@ -1004,23 +989,10 @@ plot = sns.jointplot(x="Protein", y="Total Fat", data=df)
 plot.show()
 
 ```
-				|
-				| |			<-- Histogram of Protein
-				| | | : .
-			--------------------------------------------
-			|			| pearsonr = 0.81, p = 3.7e-61	|
-			|			--------------------------------|
-			|											|
-			|											|
-			|							* <-- Outlier 	|
-			| 		***									|
-Total Fat 	|		*****								|*	
-			|	   *******								|**
-			|	   ******								|****
-			|		***									|******	 <-- Histogram of Total Fat
-			|											|	
-			---------------------------------------------
-							Protein
+
+IMAGE
+![c5_fig_histogram_protein](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_histogram_protein.png)
+
 
 **Comments:**
 * We see that the points on the scatter plot are closer to a straight line in the positive direction
@@ -1045,17 +1017,9 @@ plot.show()
 
 ```
 
-^
-|								outliers	
-|	---------					 |
-|	|		|				|	 v	
-|---------------------------- 	*** 
-|	|		|				|
-|	---------
-|
------------------------------------> 
-0     20  40  60
-				Sugars
+
+IMAGE
+![c5_fig_boxplot](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c5_fig_boxplot.png)
 
 
 **Comments:**
