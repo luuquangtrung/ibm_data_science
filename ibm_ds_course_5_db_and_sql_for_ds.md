@@ -375,8 +375,8 @@ db2 => select country, count(country) as count from author
 **Example**: Table `PET_SALE`:
 
 ID		| ANIMAL 		| QUANTITY	| SALEPRICE		| SALEDATE		
-integer	| varchar(20)	| integer	| decimal(6,2)	| date
 --------|---------------|-----------|---------------|------------
+integer	| varchar(20)	| integer	| decimal(6,2)	| date
 1		| Cat  			| 9 		| 450.09		| 2018-05-29
 2		| Dog    		| 3   		| 666.66		| 2018-05-20
 3		| Parrot 		| 1   		| 300.00		| 2018-06-04
