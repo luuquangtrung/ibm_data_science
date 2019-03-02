@@ -18,7 +18,7 @@ Statement | Category
 * `DDL`: Data Definition Languague
 * `DML`: Data Manipulation Languague
 
-Video 1: Basic SQL (5 commands) and Relational Databases
+### Video 1: Basic SQL (5 commands) and Relational Databases
 
 * SQL: Structured (English) Query Languague
 	* A languague used for relational databases to query data
@@ -43,7 +43,7 @@ Video 1: Basic SQL (5 commands) and Relational Databases
 
 * Basic 5 SQL commands: `CREATE`, `INSERT`, `SELECT`, `UPDATE`, `DELETE`
 
-Video 2: How to create a database instance?
+### Video 2: How to create a database instance?
 
 * Cloud database:
 	* Advantages: Ease of use, Scalability, Disaster Recovery
@@ -60,7 +60,7 @@ Video 2: How to create a database instance?
 		* Password
 		* Version: Compatible with DB2 for Linux, UNIX, Windows. v11.1 or later
 
-Video 3: CREATE Table Statement
+### Video 3: `CREATE` Table Statement
 Outline: 
 	* Distinguish between: 
 		1. Data Definition Languague (DDL) statements: Define, Change, or Drop data
@@ -99,7 +99,7 @@ create table COUNTRY (
 ```
 
 
-Video 4: SELECT Statement
+### Video 4: `SELECT` Statement
 Outline:
 	* Retrieve data from a relational DB table
 	* Define the use of a predicate
@@ -170,7 +170,7 @@ select * from MEDALS where YEAR = 2018 LIMIT 5
 ```
 
 
-Video 5: INSERT Statement
+### Video 5: `INSERT` Statement
 Outline:
 	* Syntax of `INSERT`
 	* Explain 2 methods to add rows to a table
@@ -206,7 +206,7 @@ insert into book_table
 	('B5', 'The Hobbit') 
 ```
 
-Video 6: UPDATE and DELETE Statements
+### Video 6: `UPDATE` and `DELETE` Statements
 Outline:
 	* Syntax of `UPDATE` and `DELETE`
 	* Importance of `WHERE` clause in both 2 statements
