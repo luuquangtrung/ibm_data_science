@@ -1,6 +1,6 @@
-========================================================
+
 # COURSE 5: DATABASES AND SQL FOR DATA SCIENCE
-========================================================
+
 
 **NOTE**: It's faster and better using [w3school.com](https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in) to test SQL queries than IBM Db2
 
