@@ -1,8 +1,4 @@
-========================================================
 # COURSE 4: PYTHON FOR DATA SCIENCE
-========================================================
-
-
 
 ## WEEK 1: Python Basics
 ## WEEK 2: Python Data Structures
@@ -56,7 +52,7 @@ tup2 = sorted(tup) # tup2 will be (1.2, 10)
 
 ```python
 tup = (10, 1.2, ("pop", "rock"), (3,4), 5)
--> tup[2][1] = "rock" 
+# -> tup[2][1] = "rock" 
 ```
 
 ### 2. Lists: Also ordered sequences like tuples
@@ -82,7 +78,7 @@ We can also access negative index of list:
 
 ```python
 ls = ['disco', 10, 1.2, [1,2], ('A', 1)]
--> ls[-1] = ('A', 1) 	
+# -> ls[-1] = ('A', 1) 	
 ```
 
 Concatenate list:
