@@ -1,6 +1,7 @@
 # COURSE 3: DATA SCIENCE METHODOLOGY
 
 
+![c1_what_is_methodology](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c1_what_is_methodology.png)
 
 > Reference (John Collins, IBM):
 https://www.ibmbigdatahub.com/blog/why-we-need-methodology-data-science 
@@ -55,15 +56,8 @@ The Data Science Methodology aims to answer 10 following questions:
 Data Science Methodology Flowchart: 
 * The data science methodology discussed in this course has been outlined by John Rollins, a seasoned and senior data scientist currently practising at IBM
 
-```
-Business Understanding 	-> Analytic Approach -> Data Requirements
-	^													||
-Feedback --------------------					Data Collection	<----
-	^						|							|| 			|
-Deployment					|					Data Understanding 	|
-	^						v							v			|
-Evaluation	<------------> Modeling <--------->	Data Preparation ----
-```
+![c1_ds_methodology_flowchart](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c1_ds_methodology_flowchart.png)
+
 
 * Properties:
 	1. The flowchart is highly iterative.
@@ -128,13 +122,9 @@ Evaluation	<------------> Modeling <--------->	Data Preparation ----
 
 Look again at the flowchart:
 
-	Business Understanding 	-> Analytic Approach -> Data Requirements
-		^													||
-	Feedback --------------------					Data Collection	<----
-		^						|							|| 			|
-	Deployment					|					Data Understanding 	|
-		^						v							v			|
-	Evaluation	<------------> Modeling <--------->	Data Preparation ----
+
+![c1_ds_methodology_flowchart](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c1_ds_methodology_flowchart.png)
+
 
 * Properties:
 	1. The flowchart is *highly iterative*: All the stages of the Methodology is iterative!
