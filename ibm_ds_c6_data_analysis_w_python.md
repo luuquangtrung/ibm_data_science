@@ -251,12 +251,12 @@ will influence the result more 	|
 
 **Example:**
 
-age 	| income	| age 	| income
---------|-----------|-------|----------
-<td colspan=2>Not-normalize <td colspan=2>Normalized
-20		| 10,000	| 0.2	| 0.2
-30		| 20,000	| 0.3	| 0.04
-40		| 50,000	| 0.4	| 1
+| age 	| income	| age 	| income
+|-------|-----------|-------|----------
+|<td colspan=2>Not-normalize <td colspan=2>Normalized
+|20		| 10,000	| 0.2	| 0.2
+|30		| 20,000	| 0.3	| 0.04
+|40		| 50,000	| 0.4	| 1
 
 
 **Normalization methods:**
