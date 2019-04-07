@@ -259,6 +259,37 @@ will influence the result more 	|
 40		| 50,000	| 0.4	| 1
 
 
+<table>
+	<tr>
+		<td colspan="2">Not-normalize</td>
+		<td colspan="2">Normalize</td>
+	</tr>
+	<tr>
+		<td>age</td>
+		<td>income</td>
+		<td>age</td>
+		<td>income</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>10,000</td>
+		<td>0.2</td>
+		<td>0.2</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>20,000</td>
+		<td>0.3</td>
+		<td>0.04</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>50,000</td>
+		<td>0.4</td>
+		<td>1</td>
+	</tr>
+</table>
+
 **Normalization methods:**
 1. *Simple Feature Scaling*: `x_new = x_old/x_max`, results range in `[0, 1]`
 2. *Min-max*: `x_new = (x_old - x_min)/(x_max - x_min)`, results range in `[0, 1]`
