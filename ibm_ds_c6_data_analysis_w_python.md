@@ -82,14 +82,14 @@ df.to_csv(path)
 ```
 
 **Summary**
--------------------------------------------------
+
 data_format	| read 				| save
 -------------------------------------------------
 `csv`		| `pd.read_csv()`	| `df.to_csv()`
 `json` 		| `pd.read_json()`	| `df.to_json()`
 `excel` 	| `pd.read_excel()`	| `df.to_excel()`
 `sql` 		| `pd.read_sql()`	| `df.to_sql()`
--------------------------------------------------
+
 
 ## 1.5. Getting Started Analyzing Data in Python
 
@@ -104,7 +104,7 @@ Basic insights from the data:
 	* Compability with python methods
 
 Data Types:
----------------------------------------------------------------------------------
+
 panda types 				| native python type 		| description
 ---------------------------------------------------------------------------------
 object 						| string 					| numbers and strings
@@ -112,7 +112,7 @@ int64 						| int 						| numeric characters
 float64 					| float 					| numberic with decimals
 datetime64, timedelta[ns] 	| N/A (but see `datetime`	| time data
 							| module of Python std lib)	|
----------------------------------------------------------------------------------
+
 
 ```python
 df.dtypes 		# return the list of data types in df
@@ -240,18 +240,18 @@ df["price"] = df["price"].astypes("int")	# to convert df to integer
 
 Data normalization: Uniform the features value with different range
 
----------------------------------------------------------------
+
 Not-normalized					| Normalized
 ---------------------------------------------------------------
 * Different range 				| * Similar value range
 * Hard to compare 				| * Similar intrinsic influence 
 * Variable with higher values  	| on analytical model	
 will influence the result more 	|
----------------------------------------------------------------
+
 
 **Example:**
 
--------------------------------------
+
 Not-normalized		| Normalized
 -------------------------------------
 age 	| income	| age 	| income
@@ -259,7 +259,7 @@ age 	| income	| age 	| income
 20		| 10,000	| 0.2	| 0.2
 30		| 20,000	| 0.3	| 0.04
 40		| 50,000	| 0.4	| 1
--------------------------------------
+
 
 **Normalization methods:**
 1. *Simple Feature Scaling*: `x_new = x_old/x_max`, results range in `[0, 1]`
@@ -318,12 +318,12 @@ Categorical to numeric solution:
 * Assign `0` or `1` in each category (called **One-hot Encoding**)
 
 Example:
----------------------------------
+
 Car | Fuel 		| gas 	| diesel
 ---------------------------------
 A 	| gas 		| 1 	| 0
 B 	| diesel 	| 0 	| 1
----------------------------------
+
 
 
 ```python
