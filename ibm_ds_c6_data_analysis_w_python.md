@@ -84,7 +84,7 @@ df.to_csv(path)
 **Summary**
 
 data_format	| read 				| save
--------------------------------------------------
+------------|-------------------|-----------------
 `csv`		| `pd.read_csv()`	| `df.to_csv()`
 `json` 		| `pd.read_json()`	| `df.to_json()`
 `excel` 	| `pd.read_excel()`	| `df.to_excel()`
@@ -106,7 +106,7 @@ Basic insights from the data:
 Data Types:
 
 panda types 				| native python type 		| description
----------------------------------------------------------------------------------
+----------------------------|---------------------------|------------------------
 object 						| string 					| numbers and strings
 int64 						| int 						| numeric characters
 float64 					| float 					| numberic with decimals
@@ -242,7 +242,7 @@ Data normalization: Uniform the features value with different range
 
 
 Not-normalized					| Normalized
----------------------------------------------------------------
+--------------------------------|------------------------------
 * Different range 				| * Similar value range
 * Hard to compare 				| * Similar intrinsic influence 
 * Variable with higher values  	| on analytical model	
@@ -253,9 +253,9 @@ will influence the result more 	|
 
 
 Not-normalized		| Normalized
--------------------------------------
+--------|-----------|-------|----------
 age 	| income	| age 	| income
--------------------------------------
+--------|-----------|-------|----------
 20		| 10,000	| 0.2	| 0.2
 30		| 20,000	| 0.3	| 0.04
 40		| 50,000	| 0.4	| 1
@@ -320,7 +320,7 @@ Categorical to numeric solution:
 Example:
 
 Car | Fuel 		| gas 	| diesel
----------------------------------
+----|-----------|-------|--------
 A 	| gas 		| 1 	| 0
 B 	| diesel 	| 0 	| 1
 
@@ -433,7 +433,7 @@ df[['price','body-style']].groupby(['body-style'],as_index= False).mean()
 
 Result:
 	| drive-wheels 	| body-style 	| price
------------------------------------------------
+----|---------------|---------------|------------
 0	| 4wd			| hatchback		| **7603.00**
 1	| 4wd			| sedan			| 12647
 2	| 4wd			| wagon			| 9095
@@ -464,8 +464,8 @@ df_pivot = df_grp.pivot(index='drive-wheels', columns='body-style')
 ```
 Result:
 
-				| price 		| 		  |			  | 		|
------------------------------------------------------------------------
+				| price 		| 		    |		    | 		|
+----------------|---------------|-----------|-----------|-------|--------
 body-style		| convertible 	| hardtop 	| hatchback | sedan	| wagon
 drive-wheels 	|  				|  		  	| 		  	| 		| 
 4wd				| 20239 		| 20239 	| 7603 		| 12647	| 9095
