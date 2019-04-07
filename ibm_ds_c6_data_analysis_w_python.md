@@ -243,18 +243,17 @@ Data normalization: Uniform the features value with different range
 
 Not-normalized					| Normalized
 --------------------------------|------------------------------
-* Different range 				| * Similar value range
-* Hard to compare 				| * Similar intrinsic influence 
-* Variable with higher values  	| on analytical model	
+Different range 				| Similar value range
+Hard to compare 				| Similar intrinsic influence 
+Variable with higher values  	| on analytical model	
 will influence the result more 	|
 
 
 **Example:**
 
-
-Span <td colspan=2>Not-normalize <td colspan=2>Normalized
---------|-----------|-------|----------
 age 	| income	| age 	| income
+--------|-----------|-------|----------
+Span <td colspan=2>Not-normalize <td colspan=2>Normalized
 --------|-----------|-------|----------
 20		| 10,000	| 0.2	| 0.2
 30		| 20,000	| 0.3	| 0.04
