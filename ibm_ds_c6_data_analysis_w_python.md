@@ -252,7 +252,7 @@ will influence the result more 	|
 **Example:**
 
 
-Not-normalized		| Normalized
+Span <td colspan=2>Not-normalize <td colspan=2>Normalized
 --------|-----------|-------|----------
 age 	| income	| age 	| income
 --------|-----------|-------|----------
