@@ -4,9 +4,9 @@
 Libraries used for this course: `matplotlib`, `pandas`, and `scikit-learn`
 
 
-# WEEK 1: Importing Datasets
+## WEEK 1: Importing Datasets
 
-## 1.1. The Problem
+### 1.1. The Problem
 
 Why Data Analysis?
 * Data is everywhere
@@ -26,7 +26,7 @@ Dataset: `csv` file (comma-separated values)
 * Asking the right questions in terms of data
 
 
-## 1.2. Understanding the Data
+### 1.2. Understanding the Data
 
 **Example:** Estimating used car prices (cont.)
 Attributes:
@@ -36,7 +36,7 @@ Attributes:
 * Prices: `target value` or `label`
 
 
-## 1.3. Python Packages for Data Science
+### 1.3. Python Packages for Data Science
 
 Three groups of Python data analysis libraries:
 1. Scientific computing libraries: 
@@ -53,7 +53,7 @@ Three groups of Python data analysis libraries:
 	* `statmodels`: explore data, estimate stat. models, perform stat. tests
 
 
-## 1.4. Importing and Exporting Data in Python
+### 1.4. Importing and Exporting Data in Python
 
 Importing data - 2 important properties:
 * Format: `csv`, `json`, `xlsx`, `hdf`, etc.
@@ -91,7 +91,7 @@ data_format	| read 				| save
 `sql` 		| `pd.read_sql()`	| `df.to_sql()`
 
 
-## 1.5. Getting Started Analyzing Data in Python
+### 1.5. Getting Started Analyzing Data in Python
 
 Basic insights from the data:
 * Understand your data before you begin any analysis
@@ -139,19 +139,19 @@ df.info() # show top 30 rows and bottom 30 rows of the df
 
 
 
-## 1.6. Copy of Getting Started Analyzing Data in Python
+### 1.6. Copy of Getting Started Analyzing Data in Python
 
 
-## LAB 1: Importing Datasets
+### LAB 1: Importing Datasets
 
-## QUIZ: Importing Datasets
-
-
+### QUIZ: Importing Datasets
 
 
-# WEEK 2: Data Wrangling
 
-## 2.1. Data Pre-processing
+
+## WEEK 2: Data Wrangling
+
+### 2.1. Data Pre-processing
 
 **Data Pre-processing:**
 * Process of converting or mapping data from one raw form into another format to make it ready for further analysis.
@@ -170,7 +170,7 @@ df["symboling"] = df["symboling"] + 1 	# adding 1 to the current values
 
 ```
 
-## 2.2. Dealing with Missing Values in Python
+### 2.2. Dealing with Missing Values in Python
 
 Missing values could be represented as: `"?"`, `"N/A"`, `0`, or just a blank cell
 
@@ -221,7 +221,7 @@ df["normalized-losses"].replace(np.nan, mean, inplace=True)
 ``` 
 
 
-## 2.3. Data Formatting in Python
+### 2.3. Data Formatting in Python
 
 
 ```python
@@ -236,7 +236,7 @@ df["price"] = df["price"].astypes("int")	# to convert df to integer
 ```
 
 
-## 2.4. Data Normalization in Python (centering/scaling)
+### 2.4. Data Normalization in Python (centering/scaling)
 
 Data normalization: Uniform the features value with different range
 
@@ -250,14 +250,6 @@ will influence the result more 	|
 
 
 **Example:**
-
- age 	| income	| age 	| income
---------|-----------|-------|----------
-<td colspan=1>Not-normalize <td colspan=1>Normalized
-20		| 10,000	| 0.2	| 0.2
-30		| 20,000	| 0.3	| 0.04
-40		| 50,000	| 0.4	| 1
-
 
 <table>
 	<tr>
@@ -309,7 +301,7 @@ df["age"] = (df["age"] - df["age"].mean()) / df["age"].std()
 ```
 
 
-## 2.5. Binning in Python
+### 2.5. Binning in Python
 
 Binning:
 * Grouping of values into `bins`
@@ -337,7 +329,7 @@ df["price-binned"] = pd.cut(df["price"], bins, labels=group_names)
 
 ```
 
-## 2.6. Turning categorical variables into quantitative variables in Python
+### 2.6. Turning categorical variables into quantitative variables in Python
 
 Problem:
 * Most statistical models cannot take in objects/strings as input 
@@ -368,7 +360,7 @@ pd.get_dummies(df["fuel"])
 df['length'] = df['length']/df['length'].max()
 df['length'] = df['length']/df['length'].max()
 
-# WEEK 3: Exploratory Data Analysis (EDA)
+## WEEK 3: Exploratory Data Analysis (EDA)
 
 * Preliminary step in DA to:
 	* Summarize main characteristics of the data
@@ -383,11 +375,11 @@ df['length'] = df['length']/df['length'].max()
 	* Correlation between different variables
 	* Advance correlation: various correlations statistical methods namely, Pearson correlation, and correlation heatmaps
 
-## 3.1. Descriptive Statistics
+### 3.1. Descriptive Statistics
 * Describe basic features of data
 * Giving short summaries about the sample and measures of the data
 
-### Method: `df.describe()`
+#### Method: `df.describe()`
 * Summarize statistics using `pandas` `describe()` method
 
 ```python
@@ -399,7 +391,7 @@ df.describe()
 '''
 ```
 
-### Method: `df.value_count()`
+#### Method: `df.value_count()`
 * Summarize the categorical data is
 * Return a Series containing counts of unique values.
 * The resulting object will be in descending order so that the first element is the most frequently-occurring element. Excludes NA values by default.
@@ -412,7 +404,7 @@ drive_wheels_counts.rename(columns = {'drive-wheels': 'value_count' inplace=True
 drive_wheels_counts.index.name = 'drive-wheels'
 ```
 
-### Visualize using Box Plot
+#### Visualize using Box Plot
 * Great way to visualize numeric data, since you can visualize the various distributions of the data
 * The main features of the box plot shows are:
 	* **Median** of the data which represents where the middle data point is
@@ -427,7 +419,7 @@ drive_wheels_counts.index.name = 'drive-wheels'
 sns.boxplot(x='drive-wheels', y='price', data=df)
 ```
 
-### Visualize using Scatter Plot
+#### Visualize using Scatter Plot
 * Show the relationship between two variables
 * Each observation represented as a point
 * Predictor/independent variables on x-axis (*horizontal*)
@@ -440,7 +432,7 @@ plt.scatter(x,y)
 ```
 
 
-## 3.2. `GroupBy`to group data in `pandas`
+### 3.2. `GroupBy`to group data in `pandas`
 * Can be applied on categorical variables
 * Group data into categories
 * Single or multiple variables
@@ -482,7 +474,7 @@ Result:
 * To make it easier to understand, we can transform this table to a pivot table by using the **pivot** method
 
 
-## Pandas method: `pivot()`
+#### Pandas method: `pivot()`
 * Typical `pivot` table has:
 	* One variable displayed along the columns 
 	* One other variable displayed along the rows
@@ -501,7 +493,7 @@ drive-wheels 	|  				|  		  	| 		  	| 		|
 fwd				| 11595 		| 8249	  	| 8396 		| 9811	| 9997
 rwd				| 23949 		| 24202 	| 14337 	| 21711	| 16994
 
-## Heatmap
+#### Heatmap
 * Plot target variable over multiple variables
 ```python
 plt.pcolor(df_pivot, cmap='RdBu') # Red-Bkye color scheme
@@ -510,9 +502,9 @@ plt.show()
 ```
 
 
-## 3.3. Correlation
+### 3.3. Correlation
 
-### Definition:
+#### Definition:
 * Correlation is a  statistical metric for measuring to what extent different variables are interdependent
 * In other words, when we look at two variables over time, if one variable changes how does this affect change in the other variable?
 
@@ -523,7 +515,7 @@ Examples:
 **Attention:**
 * Correlation does not imply causation, i.e., we can say that umbrella and rain are correlated but we would not have enough information to say whether the umbrella caused the rain or the rain caused the umbrella
 
-### Correlation - Positive linear relationship
+#### Correlation - Positive linear relationship
 ```python
 # Correlation between two features ('engine-size' and 'price')
 sns.regplot(x='engine-size', y='prices', data=df)
@@ -533,7 +525,7 @@ plt.ylim(0,)
 ![c6_w3_correlation_positive](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w3_correlation_positive.png)
 
 
-### Correlation - Negative linear relationship
+#### Correlation - Negative linear relationship
 ```python
 # Correlation between two features ('highway-mpg' and 'price')
 sns.regplot(x='highway-mpg', y='prices', data=df)
@@ -543,7 +535,7 @@ plt.ylim(0,)
 ![c6_w3_correlation_negative](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w3_correlation_negative.png)
 
 
-### Weak Correlation
+#### Weak Correlation
 ```python
 # Correlation between two features ('peak-rmp' and 'price')
 sns.regplot(x='peak-rmp', y='prices', data=df)
@@ -553,7 +545,7 @@ plt.ylim(0,)
 ![c6_w3_correlation_weak](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w3_correlation_weak.png)
 
 
-## 3.3. Pearson Correlation
+### 3.3. Pearson Correlation
 * Measure the strength of the correlation between 2 features:
 	1. Pearson correlation coefficient
 		* Close to `+1`: large positive relationship
@@ -590,7 +582,7 @@ Taking all variables into account, we can now create a heatmap that indicates th
 * This correlation heatmap gives us a good overview of how the different variables are related to one another, and most importantly, how these variables are related to price
 
 
-## 3.4. ANOVA: Analysis of Variance
+### 3.4. ANOVA: Analysis of Variance
 * Statisticcal comparison of groups
 * Example: average price of different vehicle makes. The question we may ask is how different categories the make feature as a categorical variable has impact on the price?
 
@@ -624,9 +616,9 @@ as the F-test score is less than one, and p-value is larger than 0.05
 '''
 ```
 
-# WEEK 4: Model Development
+## WEEK 4: Model Development
 
-## 4.1. Model Development
+### 4.1. Model Development
 
 * A model can be thought of as a mathematical equation used to predict a value given one or more other values
 * Relatinng one or more independent variables to dependendt variables
@@ -636,12 +628,12 @@ Example:
 
 ![c6_w4_model_development](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w4_model_development.png)
 
-## 4.2. Linear Regression and Multiple Linear Regression
+### 4.2. Linear Regression and Multiple Linear Regression
 
 * Linear Regression: 1 independent variable ($x_1$) -> LR -> Prediction
 * Multiple Linear Regression: multi independent variables ($x_1, ..., x_d$) -> MLR -> Prediction
 
-### Simple Linear Regression: $$y = b_0 + b_1*x$$
+#### Simple Linear Regression: $$y = b_0 + b_1*x$$
 
 * `x`: predictor (independent) variable
 * `y`: target (dependent) variable
@@ -675,7 +667,7 @@ lm.coef_
 Price = lm.intercept_ - lm.coef_*highway-mpg
 ```
 
-### Multiple Linear Regression (MLR): $$\hat(Y) = b_0 + b_1*x_1 + b_2*x_2 + ...$$
+#### Multiple Linear Regression (MLR): $$\hat(Y) = b_0 + b_1*x_1 + b_2*x_2 + ...$$
 MLR is used to explain relationship between 
 * 1 continuous target (`Y`) variable
 * 2 or more predictor (`X`) variables 
@@ -697,9 +689,9 @@ lm.intercept_ 	# b0
 lm.coef_ 		# coefficients array: array([b1, b2, b3, b4])
 ```
 
-## 4.3. Model Evaluation using Visualization
+### 4.3. Model Evaluation using Visualization
 
-### Regression plot: 
+#### Regression plot: 
 * Gives us a good estimate of 
 	* Relationship between 2 variables
 	* Strength of correlation
@@ -719,7 +711,7 @@ plt.ylim(0,)
 
 ![c6_w4_regresison_plot_1](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w4_regresison_plot_1.png)
 
-### Residual plot:
+#### Residual plot:
 * Represents the error between the actual value
 * Examining the predicted value and actual value we see a difference. We obtain that value by subtracting the predicted value, and the actual target value. We then plot that value on the vertical axis with the dependent variable as the horizontal axis
 
@@ -739,7 +731,7 @@ Example 3:
 * Not randomly spread out around the x-axis
 * Variance appears to change with x-axis
 
-### Create Residual Plot with Seaborn:
+#### Create Residual Plot with Seaborn:
 
 ```python
 import seaborn as sns
@@ -747,7 +739,7 @@ sns.residplot(df['highway-mpg'], df['price'])
 ``` 
 
 
-### Distribution plot 
+#### Distribution plot 
 * Counts the predicted value versus the actual value
 * These plots are extremely useful for visualizing models with more than one independent variable or feature. 
 
@@ -768,19 +760,19 @@ sns.distplot(Yhat, hist=False, color="b", label="Fitted Value", ax=ax1)
 ``` 
 
 
-## 4.4. Polynomial Regression and Pipelines
+### 4.4. Polynomial Regression and Pipelines
 
-### Polynomial regression:
+#### Polynomial regression:
 * Is a special case of the general linear regression
 * This method is beneficial for describing curvilinear relationships
 * Curvilinear relationship: It's what you get by squaring or setting higher-order terms of the predictor variables in the model transforming the data (The model can be quadratic which means that the predictor variable in the model is squared)
 
-### Polynomial order:
+#### Polynomial order:
 * Quadratic - 2nd order: `Yhat = b_0 + b_1*x_1 + b_2*(x_1)^2`
 * Cubic - 3rd order: `Yhat = b_0 + b_1*x_1 + b_2*(x_1)^2 + b_3*(x_1)^3`
 * Higher order: idem.
 
-### Polynomial Regression with numpy:
+#### Polynomial Regression with numpy:
 
 ```python
 # Calculate polynomial of 3rd order
@@ -808,7 +800,7 @@ x_poly = pr.fit_transform(x['horsepower', 'curb-weight'])
 
 ``` 
 
-### Pre-processing
+#### Pre-processing
 Normalize each feature simultaneously:
 
 ```python
@@ -819,7 +811,7 @@ SCALE.fit(x_data['horsepower', 'highway-mpg'])
 x_scale = SCALE.transform(x_data[['horsepower', 'highway-mpg']])
 ``` 
 
-### Pipelines
+#### Pipelines
 * There are more normalization methods available in the preprocessing library as well as other transformations
 * For instance, we can simplify our code by using a pipeline library:
 	* There are many steps to getting a prediction. For example: (1) Normalization -> (2) Polynomial Transform -> (3) Linear Regression
@@ -852,14 +844,14 @@ yhat = Pipe.predict(X['horsepower', 'curb-weight', 'engine-size', 'highway-mpg']
 # X -> Normalization -> Polynomial Transform -> Linear Regression -> yhat
 ``` 
 
-## 4.5. Measures for In-Sample Evaluation
+### 4.5. Measures for In-Sample Evaluation
 
 * A way to numerically determine how good the model fits on dataset
 * 2 important measures to determine the fit of a model:
 	* Mean Square Error (MSE)
 	* R-squared (R^2)
 
-### Mean Square Error
+#### Mean Square Error
 
 ```python
 from sklearn.metrics import mean_squared_error
@@ -868,7 +860,7 @@ mean_squared_error(df['price'], Y_predict_simple_fit)
 
 ![c6_w4_mse](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w4_mse.png)
 
-### R-Squared (`R^2`)
+#### R-Squared (`R^2`)
 
 * `R^2` = Coefficient of Determination
 * Is a measure to determine how close the data is to the fitted regression line
@@ -909,7 +901,7 @@ lm.score(X, Y) # 0.4965...
 
 Comment: If `R^2` value is negative, it can be due to overfitting
 
-## 4.6. Prediction and Decision Making
+### 4.6. Prediction and Decision Making
 
 Determine if our model is correct? 
 * Make sure your model results (predicted values) make sense
@@ -924,10 +916,10 @@ Determine if our model is correct?
 	4. A similar inverse relationship holds for R-squared
 
 
-# WEEK 5: Model Evaluation
+## WEEK 5: Model Evaluation
 
 
-## 5.1. Model Evaluation and Refinement
+### 5.1. Model Evaluation and Refinement
 * In-sample evaluation: tells us *how well our model will fit the data used to train it*
 * Problem: It does not tell us *how well the trained model can be used to predict new data*
 * Solution: Split our data up, use the in-sample data or training data to train the model. 
@@ -955,7 +947,7 @@ random_state: nb of generators used for random sampling
 '''
 ```
 
-### Generalization Performance
+#### Generalization Performance
 * Generalization error is measure of how well our data at predicting previously unseen data
 * The error we obtain using our testing data is an approximation of this error
 * Problem:
@@ -991,7 +983,7 @@ out of sample R-squared using the mean function NumPi.
 np.mean(scores)
 ```
 
-### Function `cross_val_predict()`
+#### Function `cross_val_predict()`
 
 * Return the prediction that was obtained for each element when it was in the test set
 * Has a similar interface to `cross_val_score()`
@@ -1003,7 +995,7 @@ from sklearn.model_selection import cross_val_score
 yhat = cross_val_predict(lr2e, x_data, y_data, cv=3)
 ```
 
-## 5.2. Overfitting, Underfitting, and Model Selection
+### 5.2. Overfitting, Underfitting, and Model Selection
 
 * Recall: The goal of `Model Selection` is to **determine the order of the polynomial** to provide the best estimate of the function `y(x)`
 * Underfitting: If we try and fit the function with a linear function, the line is not complex enough to fit the data. As a result, there are many errors. This is called underfitting, where the model is too simple to fit the data
@@ -1053,7 +1045,7 @@ for n in order:
 ```
 
 
-## 5.3. Ridge Regression
+### 5.3. Ridge Regression
 * Prevents overfitting
 * Overfitting is serious especially when we have many outliers
 * Ridge regression controls the magnitude of these polynomial coefficients by introducing the parameter `alpha`
@@ -1093,7 +1085,7 @@ $$\hat{y} = 1+ 2*x- 3*x^2- 2*x^3- 12*x^4- 40*x^5+ 80*x^6- 141*x^8- 38*x^9+ 75*x^
 ![c6_w5_alpha_10](https://github.com/luuquangtrung/ibm_data_science/blob/master/images/c6_w5_alpha_10.png)
 
 
-### Ridge Regression with `sklearn`
+#### Ridge Regression with `sklearn`
 
 ```python
 from sklearn.linear_model import Ridge
@@ -1109,7 +1101,7 @@ Set `alpha` value -> Train -> Predict -> Calculate `R-squared` and keep track of
 Finally: Select the value of `alpha` that maximizes the `R-squared`
 Note: Instread of `R-squared`, we can also use other metric like MSE
 
-### Overfitting problem 
+#### Overfitting problem 
 
 * The overfitting problem is even worse if we have lots of features
 
@@ -1128,7 +1120,7 @@ Example: Plot: `R-Squared` vs. `alpha`
 * Note: `alpha` increases -> `R-squared` on the test data decreases, and vice versa
 
 
-## 5.4. Grid Search
+### 5.4. Grid Search
 
 **Summary**
 * Grid Search allows us to scan through multiple free parameters with few lines of code
@@ -1189,7 +1181,7 @@ for param, mean_val, mean_test in zip(scores['params'], scores['mean_test_score'
 
 
 
-## QUIZ
+### QUIZ
 
 You train a ridge regression model, you get a R^2 of 1 on your training data and you get a R^2 of 0 on your validation data, what should you do:
 * your model is overfitting, increase the parameter alpha
