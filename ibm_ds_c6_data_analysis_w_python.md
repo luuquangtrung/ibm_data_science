@@ -253,8 +253,7 @@ will influence the result more 	|
 
 age 	| income	| age 	| income
 --------|-----------|-------|----------
-Span <td colspan=2>Not-normalize <td colspan=2>Normalized
---------|-----------|-------|----------
+<td colspan=2>Not-normalize <td colspan=2>Normalized
 20		| 10,000	| 0.2	| 0.2
 30		| 20,000	| 0.3	| 0.04
 40		| 50,000	| 0.4	| 1
