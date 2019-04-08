@@ -355,11 +355,12 @@ Convert categorical variables to dummy variables (0 or 1)
 '''
 pd.get_dummies(df["fuel"])
 
+df['length'] = df['length']/df['length'].max()
+df['length'] = df['length']/df['length'].max()
 ```
 
 
-df['length'] = df['length']/df['length'].max()
-df['length'] = df['length']/df['length'].max()
+
 
 # WEEK 3: Exploratory Data Analysis (EDA)
 
