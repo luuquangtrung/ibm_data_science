@@ -1060,7 +1060,7 @@ for n in order:
 
 Example:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;1&plus;&space;2x-&space;3x^2-&space;2x^3-&space;12x^4-&space;40x^5&plus;&space;80x^6-&space;141x^8-&space;38x^9&plus;&space;75x^10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;1&plus;&space;2x-&space;3x^2-&space;2x^3-&space;12x^4-&space;40x^5&plus;&space;80x^6-&space;141x^8-&space;38x^9&plus;&space;75x^10" title="\hat{y} = 1+ 2x- 3x^2- 2x^3- 12x^4- 40x^5+ 80x^6- 141x^8- 38x^9+ 75x^10" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;1&plus;&space;2*x-&space;3*x^2-&space;2*x^3-&space;12*x^4-&space;40*x^5&plus;&space;80*x^6-&space;141*x^8-&space;38*x^9&plus;&space;75*x^{10}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;1&plus;&space;2*x-&space;3*x^2-&space;2*x^3-&space;12*x^4-&space;40*x^5&plus;&space;80*x^6-&space;141*x^8-&space;38*x^9&plus;&space;75*x^{10}" title="\hat{y} = 1+ 2*x- 3*x^2- 2*x^3- 12*x^4- 40*x^5+ 80*x^6- 141*x^8- 38*x^9+ 75*x^{10}" /></a>
 
 
 `alpha`	| `x` | `x^2` | `x^3` | `x^4` | `x^5` | `x^6` | `x^7` | `x^8` | `x^9` | `x^10`
