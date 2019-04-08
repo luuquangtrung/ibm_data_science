@@ -1059,11 +1059,14 @@ for n in order:
 	
 
 Example:
-$$\hat{y} = 1+ 2*x- 3*x^2- 2*x^3- 12*x^4- 40*x^5+ 80*x^6- 141*x^8- 38*x^9+ 75*x^10$$
+$\hat{y} = 1+ 2*x- 3*x^2- 2*x^3- 12*x^4- 40*x^5+ 80*x^6- 141*x^8- 38*x^9+ 75*x^10$
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}&space;=&space;1&plus;&space;2*x-&space;3*x^2-&space;2*x^3-&space;12*x^4-&space;40*x^5&plus;&space;80*x^6-&space;141*x^8-&space;38*x^9&plus;&space;75*x^10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}&space;=&space;1&plus;&space;2*x-&space;3*x^2-&space;2*x^3-&space;12*x^4-&space;40*x^5&plus;&space;80*x^6-&space;141*x^8-&space;38*x^9&plus;&space;75*x^10" title="\hat{y} = 1+ 2*x- 3*x^2- 2*x^3- 12*x^4- 40*x^5+ 80*x^6- 141*x^8- 38*x^9+ 75*x^10" /></a>
 
 
 `alpha`	| `x` | `x^2` | `x^3` | `x^4` | `x^5` | `x^6` | `x^7` | `x^8` | `x^9` | `x^10`
-----------------------------------------------------------------------------------------
+--------|-----|-------|-------|-------|-------|-------|-------|-------|-------|--------
 0 		| 2   | -3    | -2    | -12   | -40   | 80    | 71    | -141  | -38   | 75
 0.001	| 2   | -3    | 7     | 5     | 4     | -6    | 4     | -4    | 4     | 6
 0.01	| 1   | -2    | -5    | -0.04 | -0.15 | -1    | 1     | -0.5  | 0.3   | 1
