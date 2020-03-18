@@ -647,16 +647,13 @@ Shortcoming (drawbacj) of Content-Based RS:
 ### 5.3. Collaborative Filtering
 
 * User-based collaborative filtering
-
 * Item-based collaborative filtering
-
-
 
 Cold start: Refers to the difficulty the recommendation system has when 
 	* When there is a new user, and as such a profile doesn't exist for them yet
 	* When we have a new item which has not received a rating. Scalability can become an issue as well. 
 
-	As the number of users or items increases and the amount of data expands, collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
+As the number of users or items increases and the amount of data expands, collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
 
 
 ### 5.4. Quiz
